@@ -34,7 +34,7 @@ def fetch_proxies_from_url(url):
 # Kiểm tra proxy hoạt động
 def is_proxy_live(proxy):
     try:
-        res = requests.get('https://httpbin.org/ip', proxies={"http": f"http://{proxy}", "https": f"http://{proxy}"}, timeout=5)
+        res = requests.get('https://google.com', proxies={"http": f"http://{proxy}", "https": f"http://{proxy}"}, timeout=3)
         if res.status_code == 200:
             print(f"[LIVE] {proxy}")
             return proxy
